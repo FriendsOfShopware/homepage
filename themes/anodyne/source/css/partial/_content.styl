@@ -150,3 +150,22 @@
   display block
   @media screen and (min-width: 1400px)
     display none
+
+.package-list
+  display grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+.card
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  &:hover
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  .title
+    font-size 18px;
+    font-weight bold;
+    margin-bottom 10px;
+  .description
+    margin-bottom 10px;

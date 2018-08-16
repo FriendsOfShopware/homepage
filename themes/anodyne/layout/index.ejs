@@ -9,10 +9,13 @@
 <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
     <div class="content">
         <div class="mw8 center">
-            <% page.posts.forEach(function(item, index) { %>
-                <%- partial('_partial/article-short', {item: item, index: index}) %>
-            <% }); %>
+            <h2>OUR PACKAGES</h2>
+
+            <div class="package-list">
+                <% site.tags.findOne({name: 'froshPlugin'}).posts.forEach(function(item, index) { %>
+                    <%- partial('_partial/plugin-index', {item: item, index: index}) %>
+                <% }); %>
+            </div>
         </div>
     </div>
-    <%- partial('_partial/pagination') %>
 </div>

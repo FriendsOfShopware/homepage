@@ -1,7 +1,7 @@
 <!-- Banner -->
 <%- partial('_partial/banner.ejs', {
     mainText: page.title || theme.default_post_title || __('default_post_title'),
-    secondaryText: page.date ? page.date.format(config.date_format) : '',
+    secondaryText: page.description ? page.description : '',
     faIconCss: page.icon || theme.default_post_icon || ''
 }) %>
 
@@ -40,14 +40,6 @@
 
                 </div>
                 <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 1: About -->
-                    <%- partial('_partial/widget-about') %>
-
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
                     <!-- Widget 2: Categories -->
                     <% if (page.categories && page.categories.length) { %>
                         <%- partial('_partial/widget-categories', {item: page}) %>

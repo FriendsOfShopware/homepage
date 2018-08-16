@@ -2,18 +2,15 @@
 logo_image_source: https://avatars3.githubusercontent.com/u/36633261?s=200&v=4
 
 # Index Page
-index_banner_text: Welcome to Anodyne
-index_banner_text_secondary: Create Websites. Make Magic.
+index_banner_text: Friends of Shopware
+index_banner_text_secondary: Make magic happends with Shopware 💙
 index_font_awesome_icon_css: fa fa-magic
 
 # Header
 menu:
   Home: /
   Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  About: /about.html
-  Github: https://friendsofshopware.de
+  FAQ: /categories/FAQ/
 
 # Post
 default_post_title: Untitled
