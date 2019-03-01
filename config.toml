@@ -3,6 +3,7 @@ baseurl = "https://friendsofshopware.de/"
 languageCode = "en-us"
 title = "FriendsOfShopware"
 theme = "hugo-stellar-theme"
+disableHugoGeneratorInject = false
 
 googleAnalytics = ""
 
