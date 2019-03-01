@@ -2,9 +2,16 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="{{ with .Site.Params.description }} {{ . }} {{ end }}">
-<meta name="author" content="{{ with .Site.Params.name }} {{ . }} {{ end }}">
-{{ .Hugo.Generator }}
+<meta name="description" content="FriendsOfShopware is a group of passionate developers who have banded together to build Shopware Plugins of the highest quality possible, using modern tooles, standard and practices.">
+<meta property="og:title" content="FriendsOfShopware" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="//friendsofshopware.de" />
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/36633261?s=300&v=4" />
+<meta name="author" content="FriendsOfShopware">
+<link rel="apple-touch-icon-precomposed" href="https://avatars3.githubusercontent.com/u/36633261?s=32&v=4">
+<link rel="shortcut icon" type="image/png" href="https://avatars3.githubusercontent.com/u/36633261?s=32&v=4"/>
+<meta name="theme-color" content="#189eff" />
+
 {{ "<!-- [if lte IE 8 ]]> <script src=" | safeHTML }}"{{ .Site.BaseURL }}{{ "js/ie/html5shiv.js\"></script><![endif] -->" | safeHTML }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
 {{ "<!--[if lte IE 8]><link rel=\"stylesheet\" href=" | safeHTML }}"{{ .Site.BaseURL }}{{ "css/ie8.css\" /><![endif]-->" | safeHTML }}
