@@ -1,0 +1,59 @@
+# Site settings
+baseurl = "https://friendsofshopware.de/"
+languageCode = "en-us"
+title = "FriendsOfShopware"
+theme = "hugo-stellar-theme"
+
+googleAnalytics = ""
+
+[params]
+  [params.header]
+    title = "FriendsOfShopware"
+    description = 'Group of passionate developers who have banded together to build solid and well tested Shopware Plugins'
+    image = "https://avatars3.githubusercontent.com/u/36633261?s=128&v=4"
+
+  [[params.navigation]]
+      name = "About us"
+      href = "#aboutus"
+
+  [[params.navigation]]
+    name = "How do I get in touch?"
+    href = "#touch"
+
+  [[params.navigation]]
+    name = "How can I become a member?"
+    href = "#member"
+
+  [[params.navigation]]
+    name = "Projects"
+    href = "#projects"
+
+  [params.touch]
+    title = "How to I get in touch?"
+    description = "Several of us hang out in <a href='https://gitter.im/shopware/shopware'>Shopware’s gitter channel</a>. We also have our <a href='https://gitter.im/FriendsOfShopware/Lobby'>own gitter channel</a>. Finally if you want to ask for a vote (for example to propose a new topic/plugin) please have a look at the <a href='https://github.com/FriendsOfShopware/friendsofshopware.github.io/blob/master/CONTRIBUTING.md'>contribution document</a>."
+    image = "images/gitter.svg"
+    [[params.touch.action]]
+      buttontext = "Join us on Gitter"
+      href = "https://gitter.im/FriendsOfShopware/Lobby"
+
+  [params.footer]
+    enable = false
+
+    # social icons
+    [params.footer.social_list]
+      enable = true
+
+      [[params.footer.social]]
+        title = "Twitter"
+        icon = "fa-twitter"
+        link = "https://twitter.com/ShopwareFriends"
+
+      [[params.footer.social]]
+        title = "Github"
+        icon = "fa-github"
+        link = "https://github.com/FriendsOfShopware"
+
+    # copyright
+    [params.footer.copyright]
+      enable = true
+      text = "2019 © FriendsOfShopware"
