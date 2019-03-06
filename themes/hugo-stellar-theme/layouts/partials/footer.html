@@ -1,17 +1,14 @@
 <footer id="footer">
-  <section>
-
-    {{ if .Site.Params.footer.social_list.enable }}
-      <ul class="icons">
-        {{ range .Site.Params.footer.social }}
-          <li><a href="{{ .link }}" class="icon alt {{ .icon }}"><span class="label">{{ .title }}</span></a></li>
+    <section>
+        {{ if .Site.Params.footer.social_list.enable }}
+            <ul class="icons">
+                {{ range .Site.Params.footer.social }}
+                    <li><a href="{{ .link }}" class="icon alt {{ .icon }}"><span class="label">{{ .title }}</span></a></li>
+                {{ end }}
+            </ul>
         {{ end }}
-      </ul>
+    </section>
+    {{ if .Site.Params.footer.copyright.enable }}
+        <p class="copyright">{{.Site.Params.footer.copyright.text | markdownify }}</p>
     {{ end }}
-  </section>
-  
-  {{ if .Site.Params.footer.copyright.enable }}
-    <p class="copyright">{{.Site.Params.footer.copyright.text | markdownify }}</p>
-  {{ end }}
-
 </footer>
