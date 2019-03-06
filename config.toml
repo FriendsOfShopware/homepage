@@ -22,7 +22,7 @@ googleAnalytics = ""
     href = "#touch"
 
   [[params.navigation]]
-    name = "How can I become a member?"
+    name = "How to become a member?"
     href = "#member"
 
   [[params.navigation]]
