@@ -110,7 +110,7 @@
 [[project]]
  name = "FroshFilterSearch"
  description = "Search for filter options"
- maintainers = ["eezmet"]
+ maintainers = ["eemzet"]
  enableStore = true
 
 [[project]]
