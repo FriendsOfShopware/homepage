@@ -3,7 +3,7 @@
         {{ if .Site.Params.footer.social_list.enable }}
             <ul class="icons">
                 {{ range .Site.Params.footer.social }}
-                    <li><a href="{{ .link }}" class="icon alt {{ .icon }}"><span class="label">{{ .title }}</span></a></li>
+                <li><a href="{{ .link }}" class="icon alt"><i class="fab  {{ .icon }}"></i><span class="label">{{ .title }}</span></a></li>
                 {{ end }}
             </ul>
         {{ end }}

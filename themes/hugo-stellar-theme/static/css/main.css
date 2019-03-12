@@ -2676,7 +2676,10 @@ table.alt tbody tr td {
   @media screen and (max-width: 480px) {
     #footer {
       padding: 2.5em 1em 0.5em 1em ; } }
-
+#footer .icons .fab {
+  margin:.8em;
+  font-size:1em;
+}
 /* Wrapper */
 #wrapper {
   width: 64em;
