@@ -1,0 +1,132 @@
+#Projects
+[[project]]
+ name = "FroshCodeCeptionTests"
+ description = "Codeception Testsuite for default Responsive Theme"
+ maintainers = ["fionera"]
+ enableStore = false
+
+[[project]]
+ name = "FroshProfiler"
+ description = "Symfony Profiler ported to Shopware with custom collectors"
+ maintainers = ["shyim"]
+ enableStore = true
+
+[[project]]
+ name = "FroshGrafana"
+ description = "Track your Shopware and server statistics within Grafana"
+ maintainers = ["crease29"]
+ enableStore = false
+
+[[project]]
+ name = "FroshTemplateMail"
+ description = "Store mail templates in theme"
+ maintainers = ["shyim"]
+ enableStore = true
+
+[[project]]
+ name = "FroshTemplateMailMjml"
+ description = "MJML Support for Template Mail"
+ maintainers = ["shyim"]
+ enableStore = true
+
+[[project]]
+ name = "FroshAdminer"
+ description = "Adminer for Shopware"
+ maintainers = ["shyim"]
+ enableStore = false
+
+[[project]]
+ name = "FroshViewSnapshots"
+ description = "Record or Log views"
+ maintainers = ["dneustadt"]
+ enableStore = false
+
+[[project]]
+ name = "FroshVariantSwitch"
+ description = "Shopware plugin to switch variants in basket and checkout views"
+ maintainers = ["dneustadt"]
+ enableStore = true
+
+[[project]]
+ name = "FroshMailCatcher"
+ description = "Simple mailcatcher integrated in Shopware"
+ maintainers = ["shyim"]
+ enableStore = false
+
+[[project]]
+ name = "FroshSimultaneousEditNotification"
+ description = "Backend Notification when multiple users working parallel"
+ maintainers = ["shyim"]
+ enableStore = true
+
+[[project]]
+ name = "FroshMaintenance"
+ description = "Collection of tools for Shop Maintenance"
+ maintainers = ["dneustadt","eemzet"]
+ enableStore = false
+
+[[project]]
+ name = "FroshPerformance"
+ description = "Collection of performance improvements"
+ maintainers = ["shyim","sbenmoh"]
+ enableStore = true
+
+[[project]]
+ name = "FroshIonCubeChecker"
+ description = "IonCube check for Shopware plugins"
+ maintainers = ["larsbo"]
+ enableStore = true
+
+[[project]]
+ name = "FroshWebP"
+ description = "WebP Support in Shopware"
+ maintainers = ["shyim"]
+ enableStore = true
+
+[[project]]
+ name = "FroshMailArchive"
+ description = "Simple MailArchive for Shopware"
+ maintainers = ["tinect"]
+ enableStore = true
+
+[[project]]
+ name = "FroshHttpCacheIpExclude"
+ description = "Exclude clients from Shopware HTTP Cache by IP, Params or Cookies"
+ maintainers = ["dneustadt"]
+ enableStore = true
+
+[[project]]
+ name = "FroshDataTableLayout"
+ description = "Adds data table to the available product layouts of categories"
+ maintainers = ["dneustadt"]
+ enableStore = true
+
+[[project]]
+ name = "FroshShareBasket"
+ description = "Share basket as link, everywhere"
+ maintainers = ["stefanpoensgen"]
+ enableStore = true
+
+[[project]]
+ name = "FroshFilterSearch"
+ description = "Search for filter options"
+ maintainers = ["eezmet"]
+ enableStore = true
+
+[[project]]
+ name = "FroshOptimusMediaOptimizer"
+ description = "Optimize your images with optimus.io for best results"
+ maintainers = ["tinect"]
+ enableStore = false
+
+[[project]]
+ name = "FroshTinyPngMediaOptimizer"
+ description = "Optimize your images with tinypng.com for best results"
+ maintainers = ["tinect"]
+ enableStore = false
+
+[[project]]
+ name = "FroshBunnycdnMediaStorage"
+ description = "Media-Storage-Adapter for bunnyCDN"
+ maintainers = ["tinect"]
+ enableStore = false
