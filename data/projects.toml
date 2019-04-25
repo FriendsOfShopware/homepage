@@ -130,3 +130,9 @@
  description = "Media-Storage-Adapter for bunnyCDN"
  maintainers = ["tinect"]
  enableStore = false
+
+[[project]]
+ name = "FroshFasterCacheManager"
+ description = "Significant speed improvement of Backend CacheManager"
+ maintainers = ["tinect"]
+ enableStore = false # currently not in store
