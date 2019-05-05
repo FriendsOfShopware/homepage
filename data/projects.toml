@@ -135,4 +135,4 @@
  name = "FroshFasterCacheManager"
  description = "Significant speed improvement of Backend CacheManager"
  maintainers = ["tinect"]
- enableStore = false # currently not in store
+ enableStore = true
