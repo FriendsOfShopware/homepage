@@ -136,3 +136,9 @@
  description = "Significant speed improvement of Backend CacheManager"
  maintainers = ["tinect"]
  enableStore = true
+
+[[project]]
+ name = "FroshEmotionNoAjax"
+ description = "Load Emotions without ajax"
+ maintainers = ["tinect"]
+ enableStore = false
