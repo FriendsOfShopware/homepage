@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://friendsofshopware.de/"
+baseurl = "https://friendsofshopware.com/"
 languageCode = "en-us"
 title = "FriendsOfShopware"
 theme = "hugo-stellar-theme"
