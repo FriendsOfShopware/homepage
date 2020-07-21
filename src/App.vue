@@ -1,28 +1,38 @@
 <template>
   <div id="app">
     <div class="container">
-      <navbar/>
+      <navbar />
+      <entry-jumbotron />
+      <featured-projects />
     </div>
   </div>
 </template>
 
 <script>
-import navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
+import EntryJumbotron from "./components/EntryJumbotron";
+import FeaturedProjects from "./components/FeaturedProjects";
 
 export default {
   name: "App",
   components: {
-    navbar
+    navbar: Navbar,
+    "entry-jumbotron": EntryJumbotron,
+    "featured-projects": FeaturedProjects
   }
 };
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("/Inter-Regular.woff") format("woff"), url("/Inter-Reular.woff2") format("woff2");
+}
+
 body {
-  color: var(--font);
-  font-size: 1.25rem;
-  line-height: 1.25rem;
+  font-family: "Inter-Regular";
   background-color: $background;
+  color: $font;
   margin: 0;
   padding: 0;
 }
@@ -34,6 +44,6 @@ a {
 }
 
 .container {
-  padding: 0 15%;
+  padding: 0 10%;
 }
 </style>
