@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Firstname Lastname",
+    "user": "nick",
+    "contributionCount": "123",
+    "commitCount": "123",
+    "prCount": "10",
+    "image": "frosh-logo.png"
+  },{
+    "id": 2,
+    "name": "Firstname Lastname",
+    "user": "nick",
+    "contributionCount": "123",
+    "commitCount": "123",
+    "prCount": "10",
+    "image": "frosh-logo.png"
+  },{
+    "id": 3,
+    "name": "Firstname Lastname",
+    "user": "nick",
+    "contributionCount": "123",
+    "commitCount": "123",
+    "prCount": "10",
+    "image": "frosh-logo.png"
+  },{
+    "id": 4,
+    "name": "Firstname Lastname",
+    "user": "nick",
+    "contributionCount": "123",
+    "commitCount": "123",
+    "prCount": "10",
+    "image": "frosh-logo.png"
+  }
+]
