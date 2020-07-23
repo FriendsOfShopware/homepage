@@ -4,6 +4,7 @@
       <navbar />
       <entry-jumbotron />
       <featured-projects />
+      <footer-element />
     </div>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import Navbar from "./components/Navbar";
 import EntryJumbotron from "./components/EntryJumbotron";
 import FeaturedProjects from "./components/FeaturedProjects";
+import FooterElement from "./components/Footer";
 
 export default {
   name: "App",
   components: {
     navbar: Navbar,
     "entry-jumbotron": EntryJumbotron,
-    "featured-projects": FeaturedProjects
+    "featured-projects": FeaturedProjects,
+    "footer-element": FooterElement
   }
 };
 </script>
@@ -44,6 +47,6 @@ a {
 }
 
 .container {
-  padding: 0 10%;
+  padding: 0 12.5%;
 }
 </style>

@@ -26,7 +26,8 @@ export default {
 <style scoped lang="scss">
 .jumbotron {
   color: $font;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   padding: calc(#{$default-padding} * 3) 0;
 }
