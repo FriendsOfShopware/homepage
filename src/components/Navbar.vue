@@ -1,7 +1,7 @@
 <template>
   <nav>
     <a href="/" class="logo">
-      <img src="../assets/logo.png" alt="Friends of Shopware" />
+      <img src="../assets/frosh-logo.png" alt="Friends of Shopware" />
       <span class="logo-text">Friends of Shopware</span>
     </a>
     <div class="subpage-links">

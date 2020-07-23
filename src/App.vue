@@ -4,6 +4,7 @@
       <navbar />
       <entry-jumbotron />
       <featured-projects />
+      <how-to-member />
       <footer-element />
     </div>
   </div>
@@ -14,6 +15,7 @@ import Navbar from "./components/Navbar";
 import EntryJumbotron from "./components/EntryJumbotron";
 import FeaturedProjects from "./components/FeaturedProjects";
 import FooterElement from "./components/Footer";
+import HowToMember from "./components/HowToMember";
 
 export default {
   name: "App",
@@ -21,7 +23,8 @@ export default {
     navbar: Navbar,
     "entry-jumbotron": EntryJumbotron,
     "featured-projects": FeaturedProjects,
-    "footer-element": FooterElement
+    "footer-element": FooterElement,
+    "how-to-member": HowToMember
   }
 };
 </script>
