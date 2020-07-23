@@ -63,7 +63,7 @@ export default {
 }
 
 .top-list {
-  width: 90%;
+  width: 70%;
   height: 100%;
 }
 

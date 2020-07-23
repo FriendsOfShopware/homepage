@@ -58,6 +58,7 @@
     flex-direction: column;
     flex: 1 0;
     height: inherit;
+    margin: auto 0;
 
     .fullname {
       font-weight: bold;

@@ -1,3 +1,21 @@
+.component {
+  margin-bottom: $spacer-component;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  justify-content: center;
+  background-color: $highlight;
+  align-self: center;
+  font-weight: bold;
+}
+
+.no-background {
+  background-color: transparent;
+  font-weight: normal;
+}
+
 .tag {
   border-radius: 20px;
   padding: 10px 20px;
