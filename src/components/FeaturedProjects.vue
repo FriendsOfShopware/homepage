@@ -42,9 +42,9 @@ export default {
 }
 
 .projects-line {
-  display: inline-flex;
+  display: grid;
   width: 100%;
-  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .all-projects {

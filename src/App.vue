@@ -35,8 +35,12 @@ export default {
   src: url("/Inter-Regular.woff") format("woff"), url("/Inter-Reular.woff2") format("woff2");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, sans-serif;
   background-color: $background;
   color: $font;
   margin: 0;
@@ -50,6 +54,6 @@ a {
 }
 
 .container {
-  padding: 0 12.5%;
+  padding: 0 50px;
 }
 </style>

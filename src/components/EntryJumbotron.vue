@@ -26,14 +26,13 @@ export default {
 <style scoped lang="scss">
 .jumbotron {
   color: $font;
-  display: flex;
-  flex-direction: row;
+  display: grid;
   width: 100%;
   padding: calc(#{$default-padding} * 3) 0;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .text-view {
-  width: 50%;
   margin: $default-margin;
   align-self: center;
 
@@ -53,6 +52,6 @@ export default {
 }
 
 .image-view {
-  width: 50%;
+  max-width: 100%;
 }
 </style>
