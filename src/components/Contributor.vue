@@ -7,14 +7,25 @@
       <span class="fullname">{{ user.User }}</span>
       <span class="nickname">{{ user.user }}</span>
     </div>
-    <div class="tag column">{{ user.Contributions }} contributions</div>
-    <div class="tag column">{{ user.Commits }} commits</div>
+    <FroshTag class="column">
+      {{ user.Contributions }} contributions
+    </FroshTag>
+    <FroshTag class="column">
+      {{ user.Commits }} commits
+    </FroshTag>
   </div>
 </template>
 
 <script>
+import FroshTag from "./FroshTag";
+
 export default {
   name: "Contributor",
+
+  components: {
+    FroshTag
+  },
+
   props: {
     user: Object
   }

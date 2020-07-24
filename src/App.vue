@@ -73,4 +73,8 @@ a {
     padding: 0 10px;
   }
 }
+
+.component {
+  margin-bottom: $spacer-component;
+}
 </style>

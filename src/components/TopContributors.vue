@@ -1,6 +1,6 @@
 <template>
   <div class="top-contributors">
-    <h3 class="headline">Top Contributors</h3>
+    <h3 class="headline">Contributors</h3>
     <div class="top-list mostly-customized-scrollbar">
       <div v-for="user in topFour" :key="user.id">
         <Contributor class="contributor-view" :user="user"></Contributor>
