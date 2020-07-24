@@ -1,0 +1,32 @@
+$phone-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$desktop-lg-width: 1200px;
+
+// Small devices (phone landscape)
+@mixin phone {
+  @media screen and (max-width: $phone-width) {
+    @content;
+  }
+}
+
+// Medium devices (tablets)
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+// Large devices (desktops)
+@mixin desktop {
+  @media screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops)
+@mixin desktop-lg {
+  @media screen and (max-width: $desktop-lg-width) {
+    @content;
+  }
+}
