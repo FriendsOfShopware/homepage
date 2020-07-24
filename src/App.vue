@@ -35,7 +35,9 @@ export default {
   src: url("/Inter-Regular.woff") format("woff"), url("/Inter-Reular.woff2") format("woff2");
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -45,6 +47,9 @@ body {
   color: $font;
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
