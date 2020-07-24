@@ -40,7 +40,7 @@ export default {
 }
 
 body {
-  font-family: "Inter-Regular", Arial, sans-serif;
+  font-family: $font-family-default;
   background-color: $background;
   color: $font;
   margin: 0;

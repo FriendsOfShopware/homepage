@@ -5,8 +5,8 @@
       <project v-for="singleProject in projects" :key="singleProject.name" :project="singleProject" />
     </div>
     <div class="all-projects">
-      <a href="#" class="button">All plugins on Shopware store</a>
-      <a href="#" class="button no-background">All projects on GitHub</a>
+      <frosh-button href="#">All plugins on Shopware store</frosh-button>
+      <frosh-button variant="blank" href="#">All projects on GitHub</frosh-button>
     </div>
   </div>
 </template>
@@ -14,12 +14,16 @@
 <script>
 import project from "./Project";
 import featuredProjects from "./../dataSets/featuredProjects";
+import FroshButton from "./FroshButton";
 
 export default {
   name: "FeaturedProjects",
+
   components: {
+    FroshButton,
     project
   },
+
   data() {
     return { projects: featuredProjects };
   }
@@ -57,5 +61,9 @@ export default {
 
 .all-projects {
   padding: calc(#{$default-padding} * 2) 0;
+
+  .frosh-button:not(:last-child) {
+    margin-right: $default-margin;
+  }
 }
 </style>

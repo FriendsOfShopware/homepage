@@ -25,7 +25,7 @@ export default {
   justify-content: space-between;
   align-content: center;
   border: 1px solid $border;
-  border-radius: 5px;
+  border-radius: $border-radius;
   padding: $default-padding calc(#{$default-padding} * 1.5);
   margin: $default-margin 0;
 }

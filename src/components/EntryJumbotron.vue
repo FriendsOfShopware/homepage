@@ -9,8 +9,8 @@
         the highest quality possible, using modern tools, standard and practices.
       </h2>
       <div class="important-links">
-        <a class="button" href="https://gitter.im/FriendsOfShopware/Lobby">Join us on Gitter</a>
-        <a class="button no-background" href="https://github.com/FriendsOfShopware">Projects on GitHub</a>
+        <frosh-button href="https://gitter.im/FriendsOfShopware/Lobby">Join us on Gitter</frosh-button>
+        <frosh-button variant="blank" href="https://github.com/FriendsOfShopware">Projects on GitHub</frosh-button>
       </div>
     </div>
     <img src="../assets/jumbotron-image.png" alt="The bonded developers" class="image-view" />
@@ -18,8 +18,12 @@
 </template>
 
 <script>
+import FroshButton from "./FroshButton";
+
 export default {
-  name: "entry-jumbotron"
+  name: "entry-jumbotron",
+
+  components: { FroshButton }
 };
 </script>
 
@@ -48,6 +52,10 @@ export default {
 
   .important-links {
     padding: calc(#{$default-padding} * 2) 0;
+
+    .frosh-button:not(:last-child) {
+      margin-right: $default-margin;
+    }
   }
 }
 
