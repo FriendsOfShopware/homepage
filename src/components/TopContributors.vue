@@ -1,8 +1,8 @@
 <template>
   <div class="top-contributors">
     <h3 class="headline">Top Contributors</h3>
-    <div class="top-list">
-      <div v-for="user in contributors" :key="user.id">
+    <div class="top-list mostly-customized-scrollbar">
+      <div v-for="user in topFour" :key="user.id">
         <Contributor class="contributor-view" :user="user"></Contributor>
       </div>
       <div class="fade-out"></div>
@@ -15,20 +15,32 @@
 </template>
 
 <script>
-import topContributors from "./../dataSets/topContributors";
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 import Contributor from "./Contributor";
 import FroshButton from "./FroshButton";
 
+Vue.use(VueAxios, axios);
+
 export default {
   name: "TopContributors",
+
   components: {
     FroshButton,
     Contributor
   },
+
   data() {
     return {
-      contributors: topContributors
+      topFour: []
     };
+  },
+
+  mounted() {
+    Vue.axios.get("https://api.friendsofshopware.com/v2/github/contributors").then(response => {
+      this.topFour = response.data;
+    });
   }
 };
 </script>
@@ -47,11 +59,9 @@ export default {
   bottom: 0;
   height: 100%;
   width: 100%;
+  pointer-events: none;
 
-  background: linear-gradient(to bottom,
-    rgba(0,0,0, 0) 10%,
-    $background 85%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, $background 85%);
 }
 
 .headline {
@@ -64,16 +74,33 @@ export default {
 
 .top-list {
   width: 70%;
-  height: 100%;
+  height: 600px;
+  padding-right: calc(#{$default-padding} * 4);
+  overflow: scroll;
 }
 
 .further-information {
   padding: calc(#{$default-padding} * 2) 0;
-  width:70%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+}
+
+.mostly-customized-scrollbar {
+  display: block;
+  overflow: auto;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: $highlight-background; /* or add it to the track */
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: $highlight;
 }
 </style>
