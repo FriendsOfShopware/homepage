@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" :class="classes">
     <div class="navbar__mobile">
-      <a href="/" class="logo">
+      <a href="/" class="navbar__logo">
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </a>
@@ -10,10 +10,13 @@
       </button>
     </div>
     <div class="navbar__default">
-      <a href="/" class="logo">
+      <a href="/" class="navbar__logo">
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </a>
+      <button @click="toggleOffCanvas" class="navbar__offcanvas-close" aria-label="Close">
+        &times;
+      </button>
       <div class="navbar__links">
         <a class="navbar__link active" href="/">about</a>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
@@ -54,6 +57,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$offcanvas-width: 360px;
+$offcanvas-transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
+  opacity cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s;
+
 .navbar__default,
 .navbar__mobile {
   display: flex;
@@ -63,36 +70,60 @@ export default {
   height: 70px;
 }
 
+.navbar__offcanvas-close {
+  display: none;
+  width: 36px;
+  height: 36px;
+  color: $font;
+  background: none;
+  font-size: 20px;
+  border: 1px solid lighten($border, 10%);
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: $default-margin;
+  cursor: pointer;
+
+  &:hover {
+    color: $highlight;
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
 .navbar__mobile {
   display: none;
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
     display: flex;
   }
 }
 
 .navbar__default {
-  @media screen and (max-width: 800px) {
+  @include tablet {
     display: block;
     background: $highlight-background;
     position: fixed;
     top: 0;
-    right: -360px;
+    right: -$offcanvas-width;
     bottom: 0;
-    width: 360px;
+    width: $offcanvas-width;
     height: 100%;
     padding: 20px;
-    transition: 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1) right, opacity;
+    transition: $offcanvas-transition;
+    opacity: 0;
+
+    .navbar__logo {
+      display: none;
+    }
   }
 }
 
 .navbar--offcanvas-open {
   .navbar__default {
     right: 0;
-
-    .logo {
-      display: none;
-    }
+    opacity: 1;
   }
 }
 
@@ -100,9 +131,16 @@ export default {
   background: none;
   border: none;
   color: $font;
+  outline: none;
+  width: 50px;
+  cursor: pointer;
 
   svg {
     fill: $font;
+  }
+
+  &:hover svg {
+    fill: $highlight;
   }
 }
 
@@ -116,7 +154,7 @@ a {
   align-items: center;
 }
 
-.logo,
+.navbar__logo,
 .nav-button {
   margin-top: 5px;
 }
@@ -126,11 +164,11 @@ a {
   cursor: default;
   font-weight: bold;
 
-  @media screen and (max-width: 900px) {
+  @include desktop {
     display: none;
   }
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
     display: block;
   }
 }
@@ -139,15 +177,16 @@ a {
   display: flex;
   text-transform: uppercase;
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
     display: block;
+    margin-bottom: $default-margin;
   }
 
   .navbar__link {
     padding-top: 5px;
     color: rgba($font, 0.7);
 
-    @media screen and (max-width: 800px) {
+    @include tablet {
       padding: 10px 0;
     }
   }
@@ -155,7 +194,7 @@ a {
   .navbar__link:not(:last-child) {
     margin-right: 1.8rem;
 
-    @media screen and (max-width: 800px) {
+    @include tablet {
       margin-right: 0;
     }
   }
@@ -166,7 +205,7 @@ a {
     border-top: 5px solid $highlight;
     color: rgba($font, 1);
 
-    @media screen and (max-width: 800px) {
+    @include tablet {
       border-top: none;
       padding: 10px 0;
     }

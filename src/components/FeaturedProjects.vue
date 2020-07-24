@@ -44,7 +44,15 @@ export default {
 .projects-line {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
 }
 
 .all-projects {

@@ -54,6 +54,15 @@ a {
 }
 
 .container {
-  padding: 0 50px;
+  max-width: $desktop-lg-width;
+  margin: 0 auto;
+
+  @include desktop-lg {
+    padding: 0 20px;
+  }
+
+  @include phone {
+    padding: 0 10px;
+  }
 }
 </style>
