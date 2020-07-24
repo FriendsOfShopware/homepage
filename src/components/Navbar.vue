@@ -5,34 +5,38 @@
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </a>
-      <button @click="toggleOffCanvas" class="navbar__mobile-toggle">
+      <frosh-button variant="blank" icon @click="toggleOffCanvas" class="navbar__mobile-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-      </button>
+      </frosh-button>
     </div>
     <div class="navbar__default">
       <a href="/" class="navbar__logo">
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </a>
-      <button @click="toggleOffCanvas" class="navbar__offcanvas-close" aria-label="Close">
+      <frosh-button @click="toggleOffCanvas" variant="blank" icon class="navbar__offcanvas-close" aria-label="Close">
         &times;
-      </button>
+      </frosh-button>
       <div class="navbar__links">
         <a class="navbar__link active" href="/">about</a>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
         <a class="navbar__link" href="/#tutorials">tutorials</a>
         <a class="navbar__link" href="/#hall-of-fame">hall of fame</a>
       </div>
-      <a class="button nav-button" href="https://packages.friendsofshopware.com/login">
+      <frosh-button block href="https://packages.friendsofshopware.com/login">
         Login
-      </a>
+      </frosh-button>
     </div>
   </nav>
 </template>
 
 <script>
+import FroshButton from "./FroshButton";
+
 export default {
   name: "navbar",
+
+  components: { FroshButton },
 
   data() {
     return {
@@ -66,29 +70,19 @@ $offcanvas-transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
   display: flex;
   justify-content: space-between;
   align-content: center;
+  align-items: center;
   width: 100%;
   height: 70px;
 }
 
-.navbar__offcanvas-close {
+.frosh-button.navbar__offcanvas-close {
   display: none;
-  width: 36px;
-  height: 36px;
-  color: $font;
   background: none;
-  font-size: 20px;
   border: 1px solid lighten($border, 10%);
-  border-radius: 5px;
-  outline: none;
   margin-bottom: $default-margin;
-  cursor: pointer;
-
-  &:hover {
-    color: $highlight;
-  }
 
   @include tablet {
-    display: block;
+    display: inline-flex;
   }
 }
 
@@ -124,23 +118,6 @@ $offcanvas-transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
   .navbar__default {
     right: 0;
     opacity: 1;
-  }
-}
-
-.navbar__mobile-toggle {
-  background: none;
-  border: none;
-  color: $font;
-  outline: none;
-  width: 50px;
-  cursor: pointer;
-
-  svg {
-    fill: $font;
-  }
-
-  &:hover svg {
-    fill: $highlight;
   }
 }
 
@@ -185,9 +162,11 @@ a {
   .navbar__link {
     padding-top: 5px;
     color: rgba($font, 0.7);
+    height: 70px;
 
     @include tablet {
       padding: 10px 0;
+      height: auto;
     }
   }
 
