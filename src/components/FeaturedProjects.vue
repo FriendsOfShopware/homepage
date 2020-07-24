@@ -2,7 +2,7 @@
   <div class="featured">
     <h3 class="headline">Featured projects</h3>
     <div class="projects-line">
-      <project v-for="singleProject in projects" :key="singleProject.name" :project="singleProject" />
+      <project v-for="singleProject in topProjects" :key="singleProject.name" :project="singleProject" />
     </div>
     <div class="all-projects">
       <frosh-button href="#">All plugins on Shopware store</frosh-button>
@@ -12,9 +12,13 @@
 </template>
 
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 import project from "./Project";
-import featuredProjects from "./../dataSets/featuredProjects";
 import FroshButton from "./FroshButton";
+
+Vue.use(VueAxios, axios);
 
 export default {
   name: "FeaturedProjects",
@@ -25,7 +29,15 @@ export default {
   },
 
   data() {
-    return { projects: featuredProjects };
+    return {
+      topProjects: ""
+    };
+  },
+
+  mounted() {
+    Vue.axios.get("https://api.friendsofshopware.com/v2/github/repositories").then(response => {
+      this.topProjects = response.data.splice(0, 4);
+    });
   }
 };
 </script>

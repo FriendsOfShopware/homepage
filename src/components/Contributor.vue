@@ -7,12 +7,8 @@
       <span class="fullname">{{ user.User }}</span>
       <span class="nickname">{{ user.user }}</span>
     </div>
-    <FroshTag class="column">
-      {{ user.Contributions }} contributions
-    </FroshTag>
-    <FroshTag class="column">
-      {{ user.Commits }} commits
-    </FroshTag>
+    <FroshTag class="column"> {{ user.Contributions }} contributions </FroshTag>
+    <FroshTag class="column"> {{ user.Commits }} commits </FroshTag>
   </div>
 </template>
 
@@ -79,6 +75,5 @@ export default {
     border-radius: 50%;
     width: 5em;
   }
-
 }
 </style>
