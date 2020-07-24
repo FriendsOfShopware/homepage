@@ -30,3 +30,9 @@ $desktop-lg-width: 1200px;
     @content;
   }
 }
+
+@mixin text-truncate() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

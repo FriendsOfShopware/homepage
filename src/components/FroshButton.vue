@@ -28,6 +28,15 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+
+    /**
+     * Makes the button a block element with implicit 100% width
+     */
+    block: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
@@ -37,7 +46,11 @@ export default {
     },
 
     classes() {
-      return ["frosh-button", `frosh-button--${this.variant}`, { "frosh-button--icon": this.icon }];
+      return [
+        "frosh-button",
+        `frosh-button--${this.variant}`,
+        { "frosh-button--icon": this.icon, "frosh-button--block": this.block }
+      ];
     }
   }
 };
@@ -45,6 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .frosh-button {
+  @include text-truncate;
   display: inline-block;
   border-radius: $border-radius;
   padding: 10px 20px;
@@ -55,6 +69,7 @@ export default {
   font-size: 16px;
   color: $font;
   height: 42px;
+  text-align: center;
   cursor: pointer;
   outline: none;
   transition: all ease-in-out 0.15s;
@@ -91,6 +106,10 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 20px;
+  }
+
+  &.frosh-button--block {
+    display: block;
   }
 
   svg {
