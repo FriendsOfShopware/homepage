@@ -4,11 +4,12 @@
       <img class="avatar-image" :src="user.AvatarURL" alt="Friends of Shopware Logo" />
     </div>
     <div class="name column">
-      <span class="fullname">{{ user.User }}</span>
-      <span class="nickname">{{ user.user }}</span>
+      <span class="nickname">{{ user.User }}</span>
+      <span class="fullname">{{ user.Name }}</span>
     </div>
     <FroshTag class="column"> {{ user.Contributions }} contributions </FroshTag>
     <FroshTag class="column"> {{ user.Commits }} commits </FroshTag>
+    <FroshTag class="column"> {{ user.PullRequests }} Pull Requests </FroshTag>
   </div>
 </template>
 
@@ -30,17 +31,26 @@ export default {
 
 <style scoped lang="scss">
 .contributor {
-  display: inline-flex;
+  display: flex;
   border-radius: 10px;
   border: 1px solid $border;
   padding: $default-margin;
   margin: $default-margin;
   height: inherit;
   width: 100%;
+
+  @include tablet {
+    display: block;
+    border: 1px solid red;
+  }
 }
 
 .column {
   margin: $default-margin;
+
+  @include tablet {
+    margin: $default-margin auto;
+  }
 }
 
 .name {
@@ -50,14 +60,18 @@ export default {
   height: inherit;
   margin: auto 0;
 
-  .fullname {
-    font-weight: bold;
-    font-size: 1.2rem;
+  @include tablet {
+    text-align: center;
   }
 
   .nickname {
+    font-weight: bold;
+    font-size: $font-size-default;
+  }
+
+  .fullname {
     color: rgba($font, 0.7);
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
     line-height: 1.3rem;
     margin: calc(#{$default-margin} / 2) 0;
     white-space: initial;
@@ -70,6 +84,12 @@ export default {
 
 .avatar {
   margin: 0 calc(#{$default-margin} * 2);
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $default-margin;
+  }
 
   .avatar-image {
     border-radius: 50%;

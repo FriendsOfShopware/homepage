@@ -75,7 +75,7 @@ export default {
 .top-list {
   width: 70%;
   height: 600px;
-  padding-right: calc(#{$default-padding} * 4);
+  padding-right: calc(#{$default-padding} * 2);
   overflow: scroll;
 }
 
