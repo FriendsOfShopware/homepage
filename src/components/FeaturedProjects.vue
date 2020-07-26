@@ -12,13 +12,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
 import project from "./Project";
 import FroshButton from "./FroshButton";
-
-Vue.use(VueAxios, axios);
+import GitHubClient from "./../service/github-client.service";
 
 export default {
   name: "FeaturedProjects",
@@ -35,8 +31,8 @@ export default {
   },
 
   mounted() {
-    Vue.axios.get("https://api.friendsofshopware.com/v2/github/repositories").then(response => {
-      this.topProjects = response.data.splice(0, 4);
+    GitHubClient.get("/repositories").then(response => {
+      this.topProjects = response.splice(0, 4);
     });
   }
 };

@@ -15,13 +15,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
 import Contributor from "./Contributor";
 import FroshButton from "./FroshButton";
-
-Vue.use(VueAxios, axios);
+import GitHubClient from "./../service/github-client.service";
 
 export default {
   name: "TopContributors",
@@ -37,9 +33,9 @@ export default {
     };
   },
 
-  mounted() {
-    Vue.axios.get("https://api.friendsofshopware.com/v2/github/contributors").then(response => {
-      this.topFour = response.data;
+  created() {
+    GitHubClient.get("/contributors").then(response => {
+      this.topFour = response;
     });
   }
 };
