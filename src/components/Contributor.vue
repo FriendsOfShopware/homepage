@@ -5,7 +5,7 @@
     </div>
     <div class="name column">
       <span class="nickname">{{ user.User }}</span>
-      <span class="fullname">{{ user.Name }}</span>
+      <span v-if="user.Name" class="fullname">{{ user.Name }}</span>
     </div>
     <FroshTag class="column"> {{ user.Contributions }} contributions </FroshTag>
     <FroshTag class="column"> {{ user.Commits }} commits </FroshTag>
@@ -41,7 +41,6 @@ export default {
 
   @include tablet {
     display: block;
-    border: 1px solid red;
   }
 }
 

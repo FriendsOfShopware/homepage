@@ -76,5 +76,9 @@ a {
 
 .component {
   margin-bottom: $spacer-component;
+
+  @include tablet {
+    margin-bottom: $spacer-component-mobile;
+  }
 }
 </style>

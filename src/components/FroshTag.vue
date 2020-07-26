@@ -13,7 +13,7 @@ export default {
 <style scoped lang="scss">
 .tag {
   border-radius: 20px;
-  padding: calc(#{$default-margin} / 2) calc(#{$default-margin} / 2);
+  padding: calc(#{$default-margin} / 2) 0;
   justify-content: center;
   background-color: $highlight;
   align-self: center;
