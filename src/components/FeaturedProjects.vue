@@ -2,7 +2,7 @@
   <div class="featured">
     <h3 class="headline">Featured projects</h3>
     <div class="projects-line">
-      <project v-for="singleProject in projects" :key="singleProject.name" :project="singleProject" />
+      <project v-for="singleProject in topProjects" :key="singleProject.name" :project="singleProject" />
     </div>
     <div class="all-projects">
       <frosh-button href="#">All plugins on Shopware store</frosh-button>
@@ -13,8 +13,8 @@
 
 <script>
 import project from "./Project";
-import featuredProjects from "./../dataSets/featuredProjects";
 import FroshButton from "./FroshButton";
+import GitHubClient from "./../service/github-client.service";
 
 export default {
   name: "FeaturedProjects",
@@ -25,7 +25,15 @@ export default {
   },
 
   data() {
-    return { projects: featuredProjects };
+    return {
+      topProjects: ""
+    };
+  },
+
+  mounted() {
+    GitHubClient.get("/repositories").then(response => {
+      this.topProjects = response.splice(0, 4);
+    });
   }
 };
 </script>

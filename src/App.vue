@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <div class="container">
-      <navbar />
-      <entry-jumbotron />
-      <featured-projects />
-      <how-to-member />
-      <footer-element />
+      <navbar class="component" />
+      <entry-jumbotron class="component" />
+      <featured-projects class="component" />
+      <top-contributors class="component" />
+      <how-to-member class="component" />
+      <footer-element class="component" />
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@
 import Navbar from "./components/Navbar";
 import EntryJumbotron from "./components/EntryJumbotron";
 import FeaturedProjects from "./components/FeaturedProjects";
+import TopContributors from "./components/TopContributors";
 import FooterElement from "./components/Footer";
 import HowToMember from "./components/HowToMember";
 
@@ -23,6 +25,7 @@ export default {
     navbar: Navbar,
     "entry-jumbotron": EntryJumbotron,
     "featured-projects": FeaturedProjects,
+    "top-contributors": TopContributors,
     "footer-element": FooterElement,
     "how-to-member": HowToMember
   }
@@ -68,6 +71,14 @@ a {
 
   @include phone {
     padding: 0 10px;
+  }
+}
+
+.component {
+  margin-bottom: $spacer-component;
+
+  @include tablet {
+    margin-bottom: $spacer-component-mobile;
   }
 }
 </style>
