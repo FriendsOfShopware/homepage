@@ -23,7 +23,6 @@
       <div class="navbar__links">
         <a class="navbar__link active" href="/">about</a>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
-        <a class="navbar__link" href="/#tutorials">tutorials</a>
         <a class="navbar__link" href="/#hall-of-fame">hall of fame</a>
       </div>
       <frosh-button block href="https://packages.friendsofshopware.com/login">
