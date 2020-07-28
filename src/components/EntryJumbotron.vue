@@ -9,7 +9,7 @@
         the highest quality possible, using modern tools, standard and practices.
       </h2>
       <div class="important-links">
-        <frosh-button href="https://gitter.im/FriendsOfShopware/Lobby">Join us on Gitter</frosh-button>
+        <frosh-button href="https://slack.shopware.com">Join us on Shopware Slack</frosh-button>
         <frosh-button variant="blank" href="https://github.com/FriendsOfShopware">Projects on GitHub</frosh-button>
       </div>
     </div>
