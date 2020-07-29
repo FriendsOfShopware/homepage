@@ -7,9 +7,9 @@
       <span class="nickname">{{ user.User }}</span>
       <span v-if="user.Name" class="fullname">{{ user.Name }}</span>
     </div>
-    <FroshTag class="column"> {{ user.Contributions }} contributions </FroshTag>
-    <FroshTag class="column"> {{ user.Commits }} commits </FroshTag>
-    <FroshTag class="column"> {{ user.PullRequests }} Pull Requests </FroshTag>
+    <frosh-tag class="column"> {{ user.Contributions }} contributions </frosh-tag>
+    <frosh-tag class="column"> {{ user.Commits }} commits </frosh-tag>
+    <frosh-tag class="column"> {{ user.PullRequests }} Pull Requests </frosh-tag>
   </div>
 </template>
 
@@ -17,7 +17,7 @@
 import FroshTag from "./FroshTag";
 
 export default {
-  name: "Contributor",
+  name: "frosh-contributor",
 
   components: {
     FroshTag

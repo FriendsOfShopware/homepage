@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Project",
+  name: "frosh-project",
   props: {
     project: Object
   }

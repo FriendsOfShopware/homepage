@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="frosh-footer">
     <div class="copyright">
       <div>&copy; {{ currentYear }} by Friends of Shopware</div>
       <div class="related">Friends of Shopware is not associated with the shopware AG.</div>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: "frosh-footer",
   computed: {
     currentYear: () => new Date().getFullYear()
   }
