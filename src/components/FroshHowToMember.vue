@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "HowToMember"
+  name: "frosh-how-to-member"
 };
 </script>
 

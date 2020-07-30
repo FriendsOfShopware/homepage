@@ -36,7 +36,7 @@
 import FroshButton from "./FroshButton";
 
 export default {
-  name: "navbar",
+  name: "frosh-navbar",
 
   components: { FroshButton },
 

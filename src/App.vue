@@ -1,33 +1,33 @@
 <template>
   <div id="app">
     <div class="container">
-      <navbar class="component" />
-      <entry-jumbotron class="component" />
-      <featured-projects class="component" />
-      <top-contributors class="component" />
-      <how-to-member class="component" />
-      <footer-element class="component" />
+      <frosh-navbar class="component" />
+      <frosh-entry-jumbotron class="component" />
+      <frosh-featured-projects class="component" />
+      <frosh-top-contributors class="component" />
+      <frosh-how-to-member class="component" />
+      <frosh-footer class="component" />
     </div>
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import EntryJumbotron from "./components/EntryJumbotron";
-import FeaturedProjects from "./components/FeaturedProjects";
-import TopContributors from "./components/TopContributors";
-import FooterElement from "./components/Footer";
-import HowToMember from "./components/HowToMember";
+import FroshNavbar from "./components/FroshNavbar";
+import FroshEntryJumbotron from "./components/FroshEntryJumbotron";
+import FroshFeaturedProjects from "./components/FroshFeaturedProjects";
+import FroshTopContributors from "./components/FroshTopContributors";
+import FroshFooter from "./components/FroshFooter";
+import FroshHowToMember from "./components/FroshHowToMember";
 
 export default {
   name: "App",
   components: {
-    navbar: Navbar,
-    "entry-jumbotron": EntryJumbotron,
-    "featured-projects": FeaturedProjects,
-    "top-contributors": TopContributors,
-    "footer-element": FooterElement,
-    "how-to-member": HowToMember
+    FroshNavbar,
+    FroshEntryJumbotron,
+    FroshFeaturedProjects,
+    FroshTopContributors,
+    FroshFooter,
+    FroshHowToMember
   }
 };
 </script>

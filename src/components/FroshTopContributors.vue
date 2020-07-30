@@ -3,28 +3,28 @@
     <h3 class="headline">Contributors</h3>
     <div class="top-list mostly-customized-scrollbar">
       <div v-for="user in topFour" :key="user.id">
-        <Contributor class="contributor-view" :user="user"></Contributor>
+        <frosh-contributor class="contributor-view" :user="user" />
       </div>
       <div class="fade-out"></div>
     </div>
     <div class="further-information">
-      <FroshButton href="#">Find contributors on Github</FroshButton>
-      <FroshButton href="#" variant="blank">How to contribute</FroshButton>
+      <frosh-button href="#">Find contributors on Github</frosh-button>
+      <frosh-button href="#" variant="blank">How to contribute</frosh-button>
     </div>
   </div>
 </template>
 
 <script>
-import Contributor from "./Contributor";
+import FroshContributor from "./FroshContributor";
 import FroshButton from "./FroshButton";
 import GitHubClient from "./../service/github-client.service";
 
 export default {
-  name: "TopContributors",
+  name: "frosh-top-contributors",
 
   components: {
     FroshButton,
-    Contributor
+    FroshContributor
   },
 
   data() {

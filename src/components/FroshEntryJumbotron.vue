@@ -21,7 +21,7 @@
 import FroshButton from "./FroshButton";
 
 export default {
-  name: "entry-jumbotron",
+  name: "frosh-entry-jumbotron",
 
   components: { FroshButton }
 };
