@@ -17,7 +17,7 @@
 <script>
 import FroshContributor from "./FroshContributor";
 import FroshButton from "./FroshButton";
-import GitHubClient from "./../service/github-client.service";
+import GitHubClient from "@/service/github-client.service";
 
 export default {
   name: "frosh-top-contributors",
@@ -33,10 +33,8 @@ export default {
     };
   },
 
-  created() {
-    GitHubClient.get("/contributors").then(response => {
-      this.topFour = response;
-    });
+  async created() {
+    this.topFour = await GitHubClient.get("/contributors");
   }
 };
 </script>
@@ -57,7 +55,7 @@ export default {
   width: 100%;
   pointer-events: none;
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, $background 85%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, $background 85%);
 }
 
 .headline {

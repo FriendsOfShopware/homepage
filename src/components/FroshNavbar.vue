@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar" :class="classes">
     <div class="navbar__mobile">
-      <a href="/" class="navbar__logo">
+      <router-link to="/" class="navbar__logo">
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
-      </a>
+      </router-link>
       <frosh-button variant="blank" icon @click="toggleOffCanvas" class="navbar__mobile-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
           <path d="M0 0h24v24H0z" fill="none" />
@@ -13,15 +13,15 @@
       </frosh-button>
     </div>
     <div class="navbar__default">
-      <a href="/" class="navbar__logo">
+      <router-link to="/" class="navbar__logo">
         <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
-      </a>
+      </router-link>
       <frosh-button @click="toggleOffCanvas" variant="blank" icon class="navbar__offcanvas-close" aria-label="Close">
         &times;
       </frosh-button>
       <div class="navbar__links">
-        <a class="navbar__link active" href="/">about</a>
+        <router-link active-class="active" class="navbar__link" to="/" exact>about</router-link>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
         <a class="navbar__link" href="/#hall-of-fame">hall of fame</a>
       </div>

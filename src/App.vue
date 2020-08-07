@@ -1,33 +1,22 @@
 <template>
   <div id="app">
     <div class="container">
-      <frosh-navbar class="component" />
-      <frosh-entry-jumbotron class="component" />
-      <frosh-featured-projects class="component" />
-      <frosh-top-contributors class="component" />
-      <frosh-how-to-member class="component" />
-      <frosh-footer class="component" />
+      <frosh-navbar />
+      <router-view />
+      <frosh-footer />
     </div>
   </div>
 </template>
 
 <script>
 import FroshNavbar from "./components/FroshNavbar";
-import FroshEntryJumbotron from "./components/FroshEntryJumbotron";
-import FroshFeaturedProjects from "./components/FroshFeaturedProjects";
-import FroshTopContributors from "./components/FroshTopContributors";
 import FroshFooter from "./components/FroshFooter";
-import FroshHowToMember from "./components/FroshHowToMember";
 
 export default {
   name: "App",
   components: {
     FroshNavbar,
-    FroshEntryJumbotron,
-    FroshFeaturedProjects,
-    FroshTopContributors,
-    FroshFooter,
-    FroshHowToMember
+    FroshFooter
   }
 };
 </script>
@@ -71,14 +60,6 @@ a {
 
   @include phone {
     padding: 0 10px;
-  }
-}
-
-.component {
-  margin-bottom: $spacer-component;
-
-  @include tablet {
-    margin-bottom: $spacer-component-mobile;
   }
 }
 </style>

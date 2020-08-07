@@ -14,7 +14,7 @@
 <script>
 import FroshProject from "./FroshProject";
 import FroshButton from "./FroshButton";
-import GitHubClient from "./../service/github-client.service";
+import GitHubClient from "@/service/github-client.service";
 
 export default {
   name: "frosh-featured-projects",
@@ -30,10 +30,9 @@ export default {
     };
   },
 
-  mounted() {
-    GitHubClient.get("/repositories").then(response => {
-      this.topProjects = response.splice(0, 4);
-    });
+  async mounted() {
+    const response = await GitHubClient.get("/repositories");
+    this.topProjects = response.splice(0, 4);
   }
 };
 </script>
