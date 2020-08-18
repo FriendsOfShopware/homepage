@@ -14,6 +14,30 @@ import FroshFooter from "./components/FroshFooter";
 
 export default {
   name: "App",
+
+  metaInfo() {
+    return {
+      title: "Index",
+      titleTemplate: "%s | Friends of Shopware",
+      meta: [
+        {
+          name: "author",
+          content: "FriendsOfShopware"
+        },
+        {
+          name: "og:type",
+          content: "website"
+        },
+        {
+          property: "og:title",
+          content: "Index",
+          template: chunk => `${chunk} | Friends of Shopware`,
+          vmid: "og:title"
+        }
+      ]
+    };
+  },
+
   components: {
     FroshNavbar,
     FroshFooter
