@@ -15,11 +15,44 @@ import FroshHowToMember from "@/components/FroshHowToMember";
 
 export default {
   name: "Index",
+
+  metaInfo() {
+    return {
+      title: this.metaTitle,
+      meta: [
+        {
+          name: "description",
+          content: this.metaDescription
+        },
+        {
+          name: "og:title",
+          content: this.metaTitle,
+          vmid: "og:title"
+        },
+        {
+          name: "og:description",
+          content: this.metaDescription,
+          vmid: "og:title"
+        }
+      ]
+    };
+  },
+
   components: {
     FroshEntryJumbotron,
     FroshFeaturedProjects,
     FroshTopContributors,
     FroshHowToMember
+  },
+
+  computed: {
+    metaTitle() {
+      return "Home";
+    },
+
+    metaDescription() {
+      return "Friends of Shopware is a group of passionate developers who have banded together to build Shopware Plugins of the highest quality possible, using modern tools, standard and practices.";
+    }
   }
 };
 </script>
