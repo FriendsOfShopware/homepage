@@ -1,7 +1,7 @@
 <template>
   <div class="contributor">
     <div class="avatar column">
-      <img class="avatar-image" :src="user.AvatarURL" alt="Friends of Shopware Logo" />
+      <img class="avatar-image" :src="user.AvatarURL" loading="lazy" height="80" width="80" :alt="user.User" />
     </div>
     <div class="name column">
       <span class="nickname">{{ user.User }}</span>
