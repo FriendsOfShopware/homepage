@@ -5,8 +5,8 @@
       <frosh-project v-for="singleProject in topProjects" :key="singleProject.name" :project="singleProject" />
     </div>
     <div class="all-projects">
-      <frosh-button href="#">All plugins on Shopware store</frosh-button>
-      <frosh-button variant="blank" href="#">All projects on GitHub</frosh-button>
+      <frosh-button href="https://store.shopware.com/en/friends-of-shopware.html">All plugins on Shopware store</frosh-button>
+      <frosh-button variant="blank" href="https://github.com/FriendsOfShopware">All projects on GitHub</frosh-button>
     </div>
   </div>
 </template>

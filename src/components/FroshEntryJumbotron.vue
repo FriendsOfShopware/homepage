@@ -13,7 +13,9 @@
         <frosh-button variant="blank" href="https://github.com/FriendsOfShopware">Projects on GitHub</frosh-button>
       </div>
     </div>
-    <img src="../assets/jumbotron-image.png" alt="The bonded developers" class="image-view" />
+    <!-- @todo: Replace with actual image, when all people have approved -->
+    <div class="image-view"></div>
+    <!--<img src="../assets/jumbotron-image.png" alt="The bonded developers" class="image-view" /> -->
   </div>
 </template>
 

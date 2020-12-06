@@ -2,7 +2,7 @@
   <nav class="navbar" :class="classes">
     <div class="navbar__mobile">
       <router-link to="/" class="navbar__logo">
-        <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
+        <img class="navbar__logo-image" src="../assets/frosh-old.svg" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </router-link>
       <frosh-button variant="blank" icon @click="toggleOffCanvas" class="navbar__mobile-toggle">
@@ -14,7 +14,7 @@
     </div>
     <div class="navbar__default">
       <router-link to="/" class="navbar__logo">
-        <img class="navbar__logo-image" src="../assets/frosh-logo.png" alt="Friends of Shopware" />
+        <img class="navbar__logo-image" src="../assets/frosh-old.svg" alt="Friends of Shopware" />
         <span class="logo-text">Friends of Shopware</span>
       </router-link>
       <frosh-button @click="toggleOffCanvas" variant="blank" icon class="navbar__offcanvas-close" aria-label="Close">
@@ -23,7 +23,6 @@
       <div class="navbar__links">
         <router-link active-class="active" class="navbar__link" to="/" exact>about</router-link>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
-        <a class="navbar__link" href="/#hall-of-fame">hall of fame</a>
       </div>
       <frosh-button block href="https://packages.friendsofshopware.com/login">
         Login

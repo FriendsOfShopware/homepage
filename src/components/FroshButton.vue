@@ -1,5 +1,5 @@
 <template>
-  <a v-if="hasHrefAttr" :class="classes" v-on="$listeners">
+  <a v-if="hasHrefAttr" :class="classes" v-on="$listeners" rel="noopener">
     <slot></slot>
   </a>
   <button v-else :class="classes" v-on="$listeners">

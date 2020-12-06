@@ -8,8 +8,7 @@
       <div class="fade-out"></div>
     </div>
     <div class="further-information">
-      <frosh-button href="#">Find contributors on Github</frosh-button>
-      <frosh-button href="#" variant="blank">How to contribute</frosh-button>
+      <frosh-button href="#">How to contribute</frosh-button>
     </div>
   </div>
 </template>
@@ -71,6 +70,16 @@ export default {
   height: 600px;
   padding-right: calc(#{$default-padding} * 2);
   overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #1744de; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #133ABF; 
+  }
 }
 
 .further-information {

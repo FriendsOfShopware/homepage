@@ -1,25 +1,25 @@
 <template>
-  <div class="how-to-member">
+  <div class="how-to-contribute">
     <div class="text">
-      <h3>How to become a Frosh</h3>
+      <h3>How to contribute</h3>
       <p>
-        All maintainers of a project are automatically in the Friends of Shopware group. That doesn't mean that you have
-        to provide an own plugin. Contributing to our existing plugins is also very important and we are always glad to
-        find new developers for our exciting projects.
+        If you want to contribute your own plugins, please be aware that we won’t guarantee admission before you provide at least a functional prototype. 
+        The important thing is that you are convinced by your idea and you should be developing solely for this occasion.
+        Speak with us on <a href="https://slack.shopware.com" target="_blank" ref="noopener">Slack!</a>
       </p>
     </div>
-    <img src="../assets/frosh-old.svg" alt="Friends of Shopware Logo" />
+    <img src="../assets/blue_heart.svg" alt="Community <3" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "frosh-how-to-member"
+  name: "frosh-how-to-contribute"
 };
 </script>
 
 <style scoped lang="scss">
-.how-to-member {
+.how-to-contribute {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
