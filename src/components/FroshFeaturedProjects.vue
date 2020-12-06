@@ -32,6 +32,12 @@ export default {
 
   async mounted() {
     const response = await GitHubClient.get("/repositories");
+    response.sort((a, b) => {
+      if (a.stargazers_count < b.stargazers_count) return 1;
+      if (a.stargazers_count > b.stargazers_count) return -1;
+      return 0;
+    });
+
     this.topProjects = response.splice(0, 4);
   }
 };
