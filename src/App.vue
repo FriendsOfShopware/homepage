@@ -49,6 +49,7 @@ export default {
 @font-face {
   font-family: "Inter-Regular";
   src: url("/Inter-Regular.woff") format("woff"), url("/Inter-Reular.woff2") format("woff2");
+  font-display: swap;
 }
 
 *,
