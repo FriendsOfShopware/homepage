@@ -8,7 +8,7 @@
         find new developers for our exciting projects.
       </p>
     </div>
-    <img src="../assets/frosh-old.svg" alt="Friends of Shopware Logo" />
+    <img src="../assets/frosh-old.svg" width="100" height="100" loading="lazy" alt="Friends of Shopware Logo" />
   </div>
 </template>
 

@@ -3,12 +3,13 @@
     <div class="text">
       <h3>How to contribute</h3>
       <p>
-        If you want to contribute your own plugins, please be aware that we won’t guarantee admission before you provide at least a functional prototype. 
-        The important thing is that you are convinced by your idea and you should be developing solely for this occasion.
-        Speak with us on <a href="https://slack.shopware.com" target="_blank" rel="noopener">Slack!</a>
+        If you want to contribute your own plugins, please be aware that we won’t guarantee admission before you provide
+        at least a functional prototype. The important thing is that you are convinced by your idea and you should be
+        developing solely for this occasion. Speak with us on
+        <a href="https://slack.shopware.com" target="_blank" rel="noopener">Slack!</a>
       </p>
     </div>
-    <img src="../assets/blue_heart.svg" alt="Community <3" />
+    <img src="../assets/blue_heart.svg" width="100" height="100" loading="lazy" alt="Community <3" />
   </div>
 </template>
 

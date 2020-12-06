@@ -1,7 +1,9 @@
 <template>
   <div class="project">
     <div class="name">
-      <a :href="'https://github.com/FriendsOfShopware/' + project.name" target="_blank" rel="noopener">{{ project.name }}</a>
+      <a :href="'https://github.com/FriendsOfShopware/' + project.name" target="_blank" rel="noopener">{{
+        project.name
+      }}</a>
     </div>
     <div class="description">
       {{ project.description }}

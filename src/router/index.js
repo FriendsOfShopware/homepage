@@ -5,14 +5,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'index',
+    path: "/",
+    name: "index",
     component: Index
   }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes
 });
 

@@ -7,22 +7,17 @@
       </div>
       <div class="fade-out"></div>
     </div>
-    <div class="further-information">
-      <frosh-button href="#">How to contribute</frosh-button>
-    </div>
   </div>
 </template>
 
 <script>
 import FroshContributor from "./FroshContributor";
-import FroshButton from "./FroshButton";
 import GitHubClient from "@/service/github-client.service";
 
 export default {
   name: "frosh-top-contributors",
 
   components: {
-    FroshButton,
     FroshContributor
   },
 
@@ -74,11 +69,11 @@ export default {
     width: 20px;
   }
   &::-webkit-scrollbar-thumb {
-    background: #1744de; 
+    background: #1744de;
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #133ABF; 
+    background: #133abf;
   }
 }
 
