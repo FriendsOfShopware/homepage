@@ -5,6 +5,7 @@
     <frosh-top-contributors class="component" />
     <frosh-how-to-member class="component" />
     <frosh-how-to-contribute class="component" />
+    <frosh-sponsor class="component" />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import FroshFeaturedProjects from "@/components/FroshFeaturedProjects";
 import FroshTopContributors from "@/components/FroshTopContributors";
 import FroshHowToMember from "@/components/FroshHowToMember";
 import FroshHowToContribute from "@/components/FroshHowToContribute";
+import FroshSponsor from "@/components/FroshSponsor";
 
 export default {
   name: "Index",
@@ -45,7 +47,8 @@ export default {
     FroshFeaturedProjects,
     FroshTopContributors,
     FroshHowToMember,
-    FroshHowToContribute
+    FroshHowToContribute,
+    FroshSponsor
   },
 
   computed: {
