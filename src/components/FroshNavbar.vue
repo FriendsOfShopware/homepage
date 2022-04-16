@@ -42,9 +42,6 @@
         <router-link active-class="active" class="navbar__link" to="/" exact>about</router-link>
         <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
       </div>
-      <frosh-button block href="https://packages.friendsofshopware.com/login">
-        Login
-      </frosh-button>
     </div>
   </nav>
 </template>
