@@ -7,13 +7,13 @@ const routes = [
   {
     path: "/",
     name: "index",
-    component: Index
-  }
+    component: Index,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes,
 });
 
 export default router;

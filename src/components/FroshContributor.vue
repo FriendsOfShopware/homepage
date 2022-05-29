@@ -20,12 +20,12 @@ export default {
   name: "frosh-contributor",
 
   components: {
-    FroshTag
+    FroshTag,
   },
 
   props: {
-    user: Object
-  }
+    user: Object,
+  },
 };
 </script>
 

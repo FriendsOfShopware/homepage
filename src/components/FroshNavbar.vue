@@ -56,23 +56,23 @@ export default {
 
   data() {
     return {
-      isOffCanvasOpen: false
+      isOffCanvasOpen: false,
     };
   },
 
   methods: {
     toggleOffCanvas() {
       this.isOffCanvasOpen = !this.isOffCanvasOpen;
-    }
+    },
   },
 
   computed: {
     classes() {
       return {
-        "navbar--offcanvas-open": this.isOffCanvasOpen
+        "navbar--offcanvas-open": this.isOffCanvasOpen,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

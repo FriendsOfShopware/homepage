@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "frosh-tag"
+  name: "frosh-tag",
 };
 </script>
 

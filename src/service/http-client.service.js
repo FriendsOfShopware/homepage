@@ -17,7 +17,7 @@ class HttpClient {
 
     const response = await fetch(path, {
       method: "get",
-      ...options
+      ...options,
     });
 
     if (!response.ok) {
@@ -39,7 +39,7 @@ class HttpClient {
     const response = await fetch(path, {
       method: "post",
       body: JSON.stringify(postData),
-      ...options
+      ...options,
     });
 
     if (!response.ok) {

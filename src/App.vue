@@ -22,33 +22,33 @@ export default {
       meta: [
         {
           name: "author",
-          content: "FriendsOfShopware"
+          content: "FriendsOfShopware",
         },
         {
           name: "og:type",
-          content: "website"
+          content: "website",
         },
         {
           property: "og:title",
           content: "Index",
-          template: chunk => `${chunk} | Friends of Shopware`,
-          vmid: "og:title"
-        }
-      ]
+          template: (chunk) => `${chunk} | Friends of Shopware`,
+          vmid: "og:title",
+        },
+      ],
     };
   },
 
   components: {
     FroshNavbar,
-    FroshFooter
-  }
+    FroshFooter,
+  },
 };
 </script>
 
 <style lang="scss">
 @font-face {
   font-family: "Inter-Regular";
-  src: url("/Inter-Regular.woff") format("woff"), url("/Inter-Reular.woff2") format("woff2");
+  src: url("./assets/Inter-Regular.woff") format("woff"), url("./assets/Inter-Regular.woff2") format("woff2");
   font-display: swap;
 }
 

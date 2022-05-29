@@ -23,12 +23,12 @@ export default {
 
   components: {
     FroshButton,
-    FroshProject
+    FroshProject,
   },
 
   data() {
     return {
-      topProjects: ""
+      topProjects: "",
     };
   },
 
@@ -41,7 +41,7 @@ export default {
     });
 
     this.topProjects = response.splice(0, 4);
-  }
+  },
 };
 </script>
 

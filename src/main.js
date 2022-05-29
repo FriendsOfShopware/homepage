@@ -6,10 +6,10 @@ import VueMeta from "vue-meta";
 Vue.config.productionTip = false;
 
 Vue.use(VueMeta, {
-  refreshOnceOnNavigation: true
+  refreshOnceOnNavigation: true,
 });
 
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

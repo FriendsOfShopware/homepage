@@ -42,8 +42,8 @@
 export default {
   name: "frosh-footer",
   computed: {
-    currentYear: () => new Date().getFullYear()
-  }
+    currentYear: () => new Date().getFullYear(),
+  },
 };
 </script>
 

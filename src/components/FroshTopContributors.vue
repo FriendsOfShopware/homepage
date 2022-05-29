@@ -18,18 +18,18 @@ export default {
   name: "frosh-top-contributors",
 
   components: {
-    FroshContributor
+    FroshContributor,
   },
 
   data() {
     return {
-      topFour: []
+      topFour: [],
     };
   },
 
   async created() {
     this.topFour = await GitHubClient.get("/contributors");
-  }
+  },
 };
 </script>
 

@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "frosh-how-to-contribute"
+  name: "frosh-how-to-contribute",
 };
 </script>
 

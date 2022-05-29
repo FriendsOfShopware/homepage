@@ -18,7 +18,7 @@ import FroshHowToContribute from "@/components/FroshHowToContribute";
 import FroshSponsor from "@/components/FroshSponsor";
 
 export default {
-  name: "Index",
+  name: "IndexPage",
 
   metaInfo() {
     return {
@@ -26,19 +26,19 @@ export default {
       meta: [
         {
           name: "description",
-          content: this.metaDescription
+          content: this.metaDescription,
         },
         {
           name: "og:title",
           content: this.metaTitle,
-          vmid: "og:title"
+          vmid: "og:title",
         },
         {
           name: "og:description",
           content: this.metaDescription,
-          vmid: "og:title"
-        }
-      ]
+          vmid: "og:title",
+        },
+      ],
     };
   },
 
@@ -48,7 +48,7 @@ export default {
     FroshTopContributors,
     FroshHowToMember,
     FroshHowToContribute,
-    FroshSponsor
+    FroshSponsor,
   },
 
   computed: {
@@ -58,8 +58,8 @@ export default {
 
     metaDescription() {
       return "Friends of Shopware is a group of passionate developers who have banded together to build Shopware Plugins of the highest quality possible, using modern tools, standard and practices.";
-    }
-  }
+    },
+  },
 };
 </script>
 

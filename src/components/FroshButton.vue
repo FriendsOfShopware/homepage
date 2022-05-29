@@ -18,7 +18,7 @@ export default {
       required: false,
       validator(value) {
         return ["primary", "blank"].includes(value);
-      }
+      },
     },
 
     /**
@@ -27,7 +27,7 @@ export default {
     icon: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
 
     /**
@@ -36,8 +36,8 @@ export default {
     block: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
 
   computed: {
@@ -49,10 +49,10 @@ export default {
       return [
         "frosh-button",
         `frosh-button--${this.variant}`,
-        { "frosh-button--icon": this.icon, "frosh-button--block": this.block }
+        { "frosh-button--icon": this.icon, "frosh-button--block": this.block },
       ];
-    }
-  }
+    },
+  },
 };
 </script>
 

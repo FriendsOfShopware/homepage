@@ -15,8 +15,8 @@
 export default {
   name: "frosh-project",
   props: {
-    project: Object
-  }
+    project: Object,
+  },
 };
 </script>
 

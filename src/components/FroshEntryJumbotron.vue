@@ -1,9 +1,7 @@
 <template>
   <div class="jumbotron">
     <div class="text-view">
-      <h1 class="headline">
-        Banded developers who build Shopware Plugins
-      </h1>
+      <h1 class="headline">Banded developers who build Shopware Plugins</h1>
       <h2 class="more-info">
         Friends of Shopware is a group of passionate developers who have banded together to build Shopware Plugins of
         the highest quality possible, using modern tools, standard and practices.
@@ -25,7 +23,7 @@ import FroshButton from "./FroshButton";
 export default {
   name: "frosh-entry-jumbotron",
 
-  components: { FroshButton }
+  components: { FroshButton },
 };
 </script>
 
