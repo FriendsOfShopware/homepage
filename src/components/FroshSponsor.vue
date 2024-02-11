@@ -5,16 +5,15 @@
       <p>
         Our sponsor
         <a href="https://www.jetbrains.com/?from=FriendsOfShopware" target="_blank" rel="noopener">Jetbrains</a>
-        sponsors us since two years their awesome IDEs. PhpStorm with the
-        <a href="https://plugins.jetbrains.com/plugin/7219-symfony-support" target="_blank" rel="noopener"
-          >Symfony Plugin</a
-        >
-        is an must have for any Shopware developers. Checkout their IDEs to make your life easier.
+        sponsors us since three years their awesome IDEs and <a href="https://namespace.so">Namespace.so</a> providing us with Faster GitHub Actions runners and multi arch docker images.
       </p>
     </div>
-    <a href="https://www.jetbrains.com/?from=FriendsOfShopware" target="_blank" rel="noopener"
-      ><img src="../assets/jetbrains.svg" width="100" height="100" loading="lazy" alt="Jetbrains"
-    /></a>
+    <a href="https://www.jetbrains.com/?from=FriendsOfShopware" target="_blank" rel="noopener">
+      <img src="../assets/jetbrains.svg" width="100" height="100" loading="lazy" alt="Jetbrains"/>
+    </a>
+    <a href="https://namespace.so" target="_blank" rel="noopener">
+      <img src="../assets/namespace.png" width="100" height="100" loading="lazy" alt="Namespace.so"/>
+    </a>
   </div>
 </template>
 
