@@ -38,10 +38,6 @@
       <frosh-button @click="toggleOffCanvas" variant="blank" icon class="navbar__offcanvas-close" aria-label="Close">
         &times;
       </frosh-button>
-      <div class="navbar__links">
-        <router-link active-class="active" class="navbar__link" to="/" exact>about</router-link>
-        <a class="navbar__link" href="https://packages.friendsofshopware.com/">packages</a>
-      </div>
     </div>
   </nav>
 </template>
