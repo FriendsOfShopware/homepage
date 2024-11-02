@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .featured {
   display: flex;
   justify-content: center;
@@ -64,21 +64,25 @@ export default {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
+}
 
-  @include desktop {
+@media screen and (max-width: 992px) {
+  .projects-line {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  @include phone {
+@media screen and (max-width: 576px) {
+  .projects-line {
     grid-template-columns: 1fr;
   }
 }
 
 .all-projects {
-  padding: calc(#{$default-padding} * 2) 0;
+  padding: calc(var(--default-padding) * 2) 0;
+}
 
-  .frosh-button:not(:last-child) {
-    margin-right: $default-margin;
-  }
+.all-projects .frosh-button:not(:last-child) {
+  margin-right: var(--default-margin);
 }
 </style>

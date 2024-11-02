@@ -1,15 +1,17 @@
-$background: rgb(13, 13, 13);
-$font: #fff;
-$font-size-sm: 0.7em;
-$font-size-default: 1em;
-$font-family-default: "Inter-Regular", Arial, sans-serif;
-$highlight: rgb(22, 75, 229);
-$highlight-background: rgb(22, 23, 27);
-$border: rgb(31, 35, 38);
-$border-light: #fff;
-$border-radius: 5px;
+:root {
+  --background: rgb(13, 13, 13);
+  --font: #fff;
+  --font-size-sm: 0.7em;
+  --font-size-default: 1em;
+  --font-family-default: "Inter-Regular", Arial, sans-serif;
+  --highlight: rgb(22, 75, 229);
+  --highlight-background: rgb(22, 23, 27);
+  --border: rgb(31, 35, 38);
+  --border-light: #fff;
+  --border-radius: 5px;
 
-$default-padding: 12px;
-$default-margin: 12px;
-$spacer-component: 50px;
-$spacer-component-mobile: 50px;
+  --default-padding: 12px;
+  --default-margin: 12px;
+  --spacer-component: 50px;
+  --spacer-component-mobile: 50px;
+}

@@ -27,36 +27,36 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .jumbotron {
-  color: $font;
+  color: var(--font);
   display: grid;
   width: 100%;
-  padding: calc(#{$default-padding} * 3) 0;
+  padding: calc(var(--default-padding) * 3) 0;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .text-view {
-  margin: $default-margin;
+  margin: var(--default-margin);
   align-self: center;
+}
 
-  .headline {
-    font-size: 2.25rem;
-  }
+.headline {
+  font-size: 2.25rem;
+}
 
-  .more-info {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: normal;
-  }
+.more-info {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+}
 
-  .important-links {
-    padding: calc(#{$default-padding} * 2) 0;
+.important-links {
+  padding: calc(var(--default-padding) * 2) 0;
+}
 
-    .frosh-button:not(:last-child) {
-      margin-right: $default-margin;
-    }
-  }
+.frosh-button:not(:last-child) {
+  margin-right: var(--default-margin);
 }
 
 .image-view {

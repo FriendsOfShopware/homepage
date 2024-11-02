@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 @font-face {
   font-family: "Inter-Regular";
   src: url("./assets/Inter-Regular.woff") format("woff"), url("./assets/Inter-Regular.woff2") format("woff2");
@@ -59,9 +59,9 @@ export default {
 }
 
 body {
-  font-family: $font-family-default;
-  background-color: $background;
-  color: $font;
+  font-family: var(--font-family-default);
+  background-color: var(--background);
+  color: var(--font);
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -72,18 +72,22 @@ body {
 a {
   font-style: normal;
   text-decoration: none;
-  color: $font;
+  color: var(--font);
 }
 
 .container {
-  max-width: $desktop-lg-width;
+  max-width: var(--desktop-lg-width);
   margin: 0 auto;
+}
 
-  @include desktop-lg {
+@media screen and (max-width: var(--desktop-lg-width)) {
+  .container {
     padding: 0 20px;
   }
+}
 
-  @include phone {
+@media screen and (max-width: var(--phone-width)) {
+  .container {
     padding: 0 10px;
   }
 }

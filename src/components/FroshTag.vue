@@ -10,14 +10,14 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .tag {
   border-radius: 20px;
-  padding: calc(#{$default-margin} / 2) 0;
+  padding: calc(var(--default-margin) / 2) 0;
   justify-content: center;
-  background-color: $highlight;
+  background-color: var(--highlight);
   align-self: center;
-  font-size: $font-size-sm;
+  font-size: var(--font-size-sm);
   width: 150px;
   text-align: center;
 }

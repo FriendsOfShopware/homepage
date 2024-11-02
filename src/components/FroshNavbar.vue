@@ -72,11 +72,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-$offcanvas-width: 360px;
-$offcanvas-transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
-  opacity cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s;
-
+<style scoped>
 .navbar__default,
 .navbar__mobile {
   display: flex;
@@ -90,47 +86,52 @@ $offcanvas-transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
 .frosh-button.navbar__offcanvas-close {
   display: none;
   background: none;
-  border: 1px solid lighten($border, 10%);
-  margin-bottom: $default-margin;
+  border: 1px solid lighten(var(--border), 10%);
+  margin-bottom: var(--default-margin);
+}
 
-  @include tablet {
+@media screen and (max-width: 768px) {
+  .frosh-button.navbar__offcanvas-close {
     display: inline-flex;
   }
 }
 
 .navbar__mobile {
   display: none;
+}
 
-  @include tablet {
+@media screen and (max-width: 768px) {
+  .navbar__mobile {
     display: flex;
   }
 }
 
 .navbar__default {
-  @include tablet {
+  @media screen and (max-width: 768px) {
     display: block;
-    background: $highlight-background;
+    background: var(--highlight-background);
     position: fixed;
     top: 0;
-    right: -$offcanvas-width;
+    right: -360px;
     bottom: 0;
-    width: $offcanvas-width;
+    width: 360px;
     height: 100%;
     padding: 20px;
-    transition: $offcanvas-transition;
+    transition: right cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s,
+      opacity cubic-bezier(0.694, 0.0482, 0.335, 1) 0.3s;
     opacity: 0;
+  }
 
-    .navbar__logo {
+  .navbar__logo {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }
 }
 
-.navbar--offcanvas-open {
-  .navbar__default {
-    right: 0;
-    opacity: 1;
-  }
+.navbar--offcanvas-open .navbar__default {
+  right: 0;
+  opacity: 1;
 }
 
 .navbar__logo-image {
@@ -153,11 +154,11 @@ a {
   cursor: default;
   font-weight: bold;
 
-  @include desktop {
+  @media screen and (max-width: 992px) {
     display: none;
   }
 
-  @include tablet {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 }
@@ -166,37 +167,37 @@ a {
   display: flex;
   text-transform: uppercase;
 
-  @include tablet {
+  @media screen and (max-width: 768px) {
     display: block;
-    margin-bottom: $default-margin;
+    margin-bottom: var(--default-margin);
+  }
+}
+
+.navbar__link {
+  padding-top: 5px;
+  color: rgba(var(--font), 0.7);
+  height: 70px;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+    height: auto;
   }
 
-  .navbar__link {
-    padding-top: 5px;
-    color: rgba($font, 0.7);
-    height: 70px;
-
-    @include tablet {
-      padding: 10px 0;
-      height: auto;
-    }
-  }
-
-  .navbar__link:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 1.8rem;
 
-    @include tablet {
+    @media screen and (max-width: 768px) {
       margin-right: 0;
     }
   }
 
-  .navbar__link.active,
-  .navbar__link:hover {
+  &.active,
+  &:hover {
     padding-top: 0;
-    border-top: 5px solid $highlight;
-    color: rgba($font, 1);
+    border-top: 5px solid var(--highlight);
+    color: rgba(var(--font), 1);
 
-    @include tablet {
+    @media screen and (max-width: 768px) {
       border-top: none;
       padding: 10px 0;
     }

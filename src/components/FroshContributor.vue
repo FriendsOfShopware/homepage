@@ -29,26 +29,26 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .contributor {
   display: flex;
   border-radius: 10px;
-  border: 1px solid $border;
-  padding: $default-margin;
-  margin: $default-margin;
+  border: 1px solid var(--border);
+  padding: var(--default-margin);
+  margin: var(--default-margin);
   height: inherit;
   width: 100%;
 
-  @include tablet {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 }
 
 .column {
-  margin: $default-margin;
+  margin: var(--default-margin);
 
-  @include tablet {
-    margin: $default-margin auto;
+  @media screen and (max-width: 768px) {
+    margin: var(--default-margin) auto;
   }
 }
 
@@ -59,20 +59,20 @@ export default {
   height: inherit;
   margin: auto 0;
 
-  @include tablet {
+  @media screen and (max-width: 768px) {
     text-align: center;
   }
 
   .nickname {
     font-weight: bold;
-    font-size: $font-size-default;
+    font-size: var(--font-size-default);
   }
 
   .fullname {
-    color: rgba($font, 0.7);
-    font-size: $font-size-sm;
+    color: rgba(var(--font), 0.7);
+    font-size: var(--font-size-sm);
     line-height: 1.3rem;
-    margin: calc(#{$default-margin} / 2) 0;
+    margin: calc(var(--default-margin) / 2) 0;
     white-space: initial;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -82,12 +82,12 @@ export default {
 }
 
 .avatar {
-  margin: 0 calc(#{$default-margin} * 2);
+  margin: 0 calc(var(--default-margin) * 2);
 
-  @include tablet {
+  @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
-    margin-bottom: $default-margin;
+    margin-bottom: var(--default-margin);
   }
 
   .avatar-image {

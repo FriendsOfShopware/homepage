@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
+import postcssNesting from 'postcss-nesting';
 
 export default defineConfig({
   plugins: [vue()],
@@ -11,13 +12,8 @@ export default defineConfig({
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
   },
   css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "@/styles/_variables.scss";
-          @import "@/styles/_mixins.scss";
-        `,
-      },
+    postcss: {
+      plugins: [postcssNesting()],
     },
   },
 });

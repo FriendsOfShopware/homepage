@@ -56,18 +56,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .frosh-button {
-  @include text-truncate;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   display: inline-block;
-  border-radius: $border-radius;
+  border-radius: 5px;
   padding: 10px 20px;
-  background-color: lighten($highlight-background, 5%);
+  background-color: #1a1a1a;
   font-weight: bold;
   border: 1px solid transparent;
-  font-family: $font-family-default;
+  font-family: var(--font-family-default);
   font-size: 16px;
-  color: $font;
+  color: var(--font);
   height: 42px;
   text-align: center;
   cursor: pointer;
@@ -75,14 +77,14 @@ export default {
   transition: all ease-in-out 0.15s;
 
   &.frosh-button--primary {
-    background-color: $highlight;
+    background-color: var(--highlight);
 
     &:hover {
-      background-color: lighten($highlight, 5%);
+      background-color: lighten(var(--highlight), 5%);
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px darken($highlight, 15%);
+      box-shadow: 0 0 0 3px darken(var(--highlight), 15%);
     }
   }
 
@@ -91,11 +93,11 @@ export default {
     font-weight: normal;
 
     &:hover {
-      background-color: $highlight-background;
+      background-color: var(--highlight-background);
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px lighten($border, 10%);
+      box-shadow: 0 0 0 3px lighten(var(--border), 10%);
     }
   }
 
