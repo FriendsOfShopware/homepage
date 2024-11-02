@@ -28,7 +28,14 @@ export default {
   },
 
   async created() {
-    this.topFour = await GitHubClient.get("/contributors");
+    this.topFour = await GitHubClient.get("/contributors").then(function (response) {
+      return response.filter(function (user) {
+        return (
+          !user.User.includes("[bot]") &&
+          !["ImgBotApp", "snyk-bot", "actions-user", "deepsourcebot"].includes(user.User)
+        );
+      });
+    });
   },
 };
 </script>
