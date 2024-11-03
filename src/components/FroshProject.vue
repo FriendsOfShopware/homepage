@@ -24,9 +24,9 @@ export default {
 .project {
   display: flex;
   flex-direction: column;
-  background-color: $highlight-background;
-  padding: $default-padding;
-  margin: $default-margin;
+  background-color: var(--highlight-background);
+  padding: var(--default-padding);
+  margin: var(--default-margin);
   border-radius: 10px;
   flex: 1 0;
   height: inherit;
@@ -38,10 +38,10 @@ export default {
 }
 
 .description {
-  color: rgba($font, 0.7);
+  color: rgba(var(--font), 0.7);
   font-size: 0.9rem;
   line-height: 1.3rem;
-  margin: calc(#{$default-margin} / 2) 0;
+  margin: calc(var(--default-margin) / 2) 0;
   white-space: initial;
   overflow: hidden;
   text-overflow: ellipsis;

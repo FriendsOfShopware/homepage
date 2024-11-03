@@ -6,28 +6,28 @@ $desktop-lg-width: 1200px;
 // Small devices (phone landscape)
 @mixin phone {
   @media screen and (max-width: $phone-width) {
-    @content;
+    @include content;
   }
 }
 
 // Medium devices (tablets)
 @mixin tablet {
   @media screen and (max-width: $tablet-width) {
-    @content;
+    @include content;
   }
 }
 
 // Large devices (desktops)
 @mixin desktop {
   @media screen and (max-width: $desktop-width) {
-    @content;
+    @include content;
   }
 }
 
 // Extra large devices (large desktops)
 @mixin desktop-lg {
   @media screen and (max-width: $desktop-lg-width) {
-    @content;
+    @include content;
   }
 }
 

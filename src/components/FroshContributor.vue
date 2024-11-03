@@ -32,7 +32,7 @@ export default {
 <style scoped lang="scss">
 .contributor {
   display: flex;
-  border-radius: 10px;
+  border-radius: $border-radius;
   border: 1px solid $border;
   padding: $default-margin;
   margin: $default-margin;

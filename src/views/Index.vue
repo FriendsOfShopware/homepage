@@ -65,10 +65,10 @@ export default {
 
 <style scoped lang="scss">
 .component {
-  margin-bottom: $spacer-component;
+  margin-bottom: var(--spacer-component);
 
   @include tablet {
-    margin-bottom: $spacer-component-mobile;
+    margin-bottom: var(--spacer-component-mobile);
   }
 }
 </style>

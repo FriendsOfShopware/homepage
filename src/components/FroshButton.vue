@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .frosh-button {
-  @include text-truncate;
+  @include text-truncate();
   display: inline-block;
   border-radius: $border-radius;
   padding: 10px 20px;

@@ -29,10 +29,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  border: 1px solid $border;
-  border-radius: $border-radius;
-  padding: $default-padding calc(#{$default-padding} * 1.5);
-  margin: $default-margin 0;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--default-padding) calc(var(--default-padding) * 1.5);
+  margin: var(--default-margin) 0;
 }
 
 .text {
@@ -44,7 +44,7 @@ export default {
 
 img {
   align-self: center;
-  margin: $default-margin;
+  margin: var(--default-margin);
   height: 100px;
 }
 </style>

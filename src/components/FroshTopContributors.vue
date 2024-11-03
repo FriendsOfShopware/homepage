@@ -56,7 +56,7 @@ export default {
   width: 100%;
   pointer-events: none;
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, $background 85%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, var(--background) 85%);
 }
 
 .headline {
@@ -70,7 +70,7 @@ export default {
 .top-list {
   width: 70%;
   height: 600px;
-  padding-right: calc(#{$default-padding} * 2);
+  padding-right: calc(var(--default-padding) * 2);
   overflow: scroll;
   &::-webkit-scrollbar {
     width: 20px;
@@ -85,7 +85,7 @@ export default {
 }
 
 .further-information {
-  padding: calc(#{$default-padding} * 2) 0;
+  padding: calc(var(--default-padding) * 2) 0;
   width: 70%;
   height: 100%;
   display: flex;
@@ -102,10 +102,10 @@ export default {
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: $highlight-background; /* or add it to the track */
+  background-color: var(--highlight-background); /* or add it to the track */
 }
 
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: $highlight;
+  background: var(--highlight);
 }
 </style>
